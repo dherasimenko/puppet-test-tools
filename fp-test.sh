@@ -1,19 +1,5 @@
 #!/bin/bash
 
-color () {
-    case $2 in
-        black)  echo $(tput setaf 0)$1$(tput sgr0)$*;;
-        red)    echo $(tput setaf 1)$1$(tput sgr0)$*;;
-        green)  echo $(tput setaf 2)$1$(tput sgr0)$*;;
-        yellow) echo $(tput setaf 3)$1$(tput sgr0)$*;;
-        blue)   echo $(tput setaf 4)$1$(tput sgr0)$*;;
-        purple) echo $(tput setaf 5)$1$(tput sgr0)$*;;
-        cyan)   echo $(tput setaf 6)$1$(tput sgr0)$*;;
-        white)  echo $(tput setaf 7)$1$(tput sgr0)$*;;
-        *)      echo 0;;
-    esac
-}
-
 PATH_TO_PLUGIN=$1
 MANIFEST_FILES=`find ${PATH_TO_PLUGIN}/ -path ${PATH_TO_PLUGIN}/.build -prune -o -name '*.pp' -print`
 
