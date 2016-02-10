@@ -1,0 +1,2 @@
+#Relative to fuel-library base dir
+-e file:./../fuel-tasklib#egg=tasklib
